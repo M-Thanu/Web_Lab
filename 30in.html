@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Form</title>
+    <style>
+        h1{
+            background-color: #88f393;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Workshop Registration</h1>
+    <h3><u> Registration Details </u></h3>
+
+    <form action="reg.php" method="get">
+        <label for="name"> Full Name </label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email"> Email</label>
+        <input type="text" id="email" name="email"> <br><br>
+
+        <label for="in">Subject Interest </label>
+        <select name="in" id="in">
+            <option value="math">Maths</option>
+            <option value="sci">Science</option>
+            <option value="phy">Physics</option>
+        </select>
+        <br>
+        Gender
+        <input type="radio" name="gen" id="male" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" name="gen" id="female" value="female">
+        <label for="female">Female</label>
+<br><br>
+        <label for="date"> Date of Birth </label>
+        <input type="date" id="dob" name="dob">
+<br><br>
+        <button type="submit" value="Submit">Register</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+</body>
+</html>

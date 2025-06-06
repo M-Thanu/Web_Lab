@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #8bc4f3;
+            }
+            h2{
+                text-align:center;
+            }
+            .form-con {
+                background-color: white;
+                width: 400px;
+                margin: 50px auto;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            }
+            input[type="text"],
+            input[type="email"],
+            select,
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            }
+            .radio-group,
+            .checkbox-group {
+                margin-bottom: 10px;
+            }
+            .radio-group label,
+            .checkbox-group label {
+                display: inline-block;
+                margin-right: 10px;
+            }
+            .sub-but {
+                width: 100%;
+                background-color: green;
+                color: white;
+                border: none;
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-con">
+            <h2> Registration Form</h2>
+            <form id="regForm" onsubmit="return validateForm()">
+                <label for="userid">User ID: </label><br>
+                <input type="text" id="userid" name="userid"><br>
+
+                <label for="name">Name: </label><br>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address"><br>
+
+                <label for="country">Country:</label><br>
+                <select id="country" name="country">
+                    <option value="">(Please select a country)</option>
+                    <option value="SriLanka">SriLanka</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select><br>
+
+                <label for="zip">ZIP Code:</label><br>
+                <input type="text" id="zip" name="zip"><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+
+                <label>Sex:</label><br>
+                <div class="radio-group">
+                    <label><input type="radio" name="sex" value="Male"> Male</label>
+                    <label><input type="radio" name="sex" value="Female"> Female</label>
+                </div><br>
+
+                <label>Language:</label><br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="language" value="English"> English</label>
+                    <label><input type="checkbox" name="language" value="Non English"> Non English</label>
+                </div><br>
+
+                <label for="about">About:</label><br>
+                <textarea id="about" name="about" rows="4"></textarea>
+                <br><br>
+                <button type="submit" class="sub-but">Submit</button>
+            </form>
+        </div>
+        
+        <script>
+            function validateForm() {
+                const userid = document.getElementById("userid").value.trim();
+                const name = document.getElementById("name").value.trim();
+                const country = document.getElementById("country").value;
+                const email = document.getElementById("email").value.trim();
+                const sex = document.querySelector('input[name="sex"]:checked');
+                const languages = document.querySelectorAll('input[name="language"]:checked');
+
+                const nameRegex = /^[A-Za-z\s]+$/;
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (userid === "" || userid.length < 5 || userid.length > 12) {
+                    alert("User ID is required and must be between 5 to 12 characters.");
+                    return false;
+                }
+
+                if (name === "" || !nameRegex.test(name)) {
+                    alert("Name is required and should contain alphabets only.");
+                    return false;
+                }
+
+                if (country === "") {
+                    alert("Please select a country.");
+                    return false;
+                }
+
+                if (email === "" || !emailRegex.test(email)) {
+                    alert("A valid Email is required.");
+                    return false;
+                }
+
+                if (!sex) {
+                    alert("Please select your sex.");
+                    return false;
+                }
+
+                if (languages.length === 0) {
+                    alert("Please select at least one language.");
+                    return false;
+                }
+
+                alert("Form submitted successfully!");
+                return true;
+            }
+        </script>
+
+    </body>
+</html>
