@@ -1,6 +1,28 @@
 <html>
     <head>
         <title> Patient Information </title>
+        <style>
+            body{
+                background-color: #F8D0C7;
+                background-image: url('https://img.freepik.com/free-photo/empty-hallway-background_23-2149408808.jpg?ga=GA1.1.96343304.1700628471&semt=ais_hybrid&w=740');
+                background-repeat: no-repeat;
+                background-position:center top;
+                background-attachment: fixed;
+            }
+
+            .btn1{
+                background-color: grey;
+                color:red;
+                border:solid purple 1px;
+                border-radius:8px;
+                cursor:pointer;
+                padding:6px 12px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 46px;
+                margin:4px 2px;
+            }
+        </style>
     </head>
     <body>
         <h2> Registration </h2>
@@ -20,8 +42,8 @@
                 <textarea name="adrs" id="adrs">
                     Address:
                 </textarea><br><br>
-                <input type="submit" id="sbt" name="sbt" value="Submit">
-                <input type="reset" id="rst" name="rst" value="Clear">
+                <input type="submit" id="sbt" name="sbt" value="Submit" class="btn1">
+                <input type="reset" id="rst" name="rst" value="Clear" class="btn1">
             </fieldset>
         </form>
 
@@ -56,6 +78,30 @@
             </fieldset>
         </form>
 
-        <form action="#"></form>
+        <form action="#">
+            <fieldset>
+                <legend> Payment Details </legend>
+                <p>Card Type:
+                <label for="visa"> Visa</label>
+                <input type="radio" name="card" id="visa" value="visa"> 
+                <label for="mas"> Master</label>
+                <input type="radio" name="card" id="mas" value="mas"> 
+                <label for="amex"> Amex</label>
+                <input type="radio" name="card" id="amex" value="amex">  </p>
+
+                <label for="cname"> Name of Card Holder: </label>
+                <input type="text" id="cname" name="cname" placeholder="exactly as it appears in the card" size="30"><br><br>
+
+                <label for="cnum"> Card Number: </label>
+                <input type="number" id="cnum" name="cnum"> <br><br>
+
+                <label for="cvv"> CVV Number: </label>
+                <input type="number" id="cvv" name="cvv"> <br><br>
+
+                <label for="exp"> Expiry Date: </label>
+                <input type="date" name="exp" id="exp">
+            </fieldset>
+        </form>
+
     </body>
 </html>
