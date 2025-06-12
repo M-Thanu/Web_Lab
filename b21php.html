@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h2> Registration </h2>
+        <form action="b21form.php" method="post">
+            <fieldset>
+                <legend> Patient Information </legend>
+                <label for="name"> Name: </label>
+                <span id="namer" style="color:red;">* </span>
+                <input type="text" name="name" id="name" > <br><br>
+                <label for="dob"> Date of Birth: </label>
+                <input type="text" name="dob" id="dob" > <br><br>
+                <label for="email"> Mail: </label>
+                <input type="text" name="email" id="email"> <br><br>
+                <label for="age"> Age </label>
+                <input type="number" name="age" id="age"> <br><br>
+                <textarea name="adrs" id="adrs">
+                    Address:
+                </textarea><br><br>
+                <input type="submit" id="sbt" name="sbt" value="Submit" class="btn1">
+                <input type="reset" id="rst" name="rst" value="Clear" class="btn1">
+            </fieldset>
+        </form>
+
+        
+
+</body>
+</html>
+
+<?php
+?>
