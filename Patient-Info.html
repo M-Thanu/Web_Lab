@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title> Patient Information </title>
+    </head>
+    <body>
+        <h2> Registration </h2>
+        <form action="#" method="get">
+            <fieldset>
+                <legend> Patient Information </legend>
+                <label for="fname"> First Name: </label>
+                <input type="text" name="fname" id="fname" required> <br><br>
+                <label for="lname"> Last Name: </label>
+                <input type="text" name="lname" id="lname" required> <br><br>
+                <label for="dob"> Date of Birth: </label>
+                <input type="text" name="dob" id="dob" required> <br><br>
+                <label for="mail"> Mail: </label>
+                <input type="text" name="mail" id="mail"> <br><br>
+                <label for="tlno"> Telephone Number: </label>
+                <input type="number" name="tlno" id="tlno"> <br><br>
+                <textarea name="adrs" id="adrs">
+                    Address:
+                </textarea><br><br>
+                <input type="submit" id="sbt" name="sbt" value="Submit">
+                <input type="reset" id="rst" name="rst" value="Clear">
+            </fieldset>
+        </form>
+
+        <hr style="color:blue; border:3px;">
+
+        <form action="#">
+            <fieldset>
+                <legend> Doctor Details: </legend>
+                <label for="doctor"> Name: </label>
+                <select name="doctor" id="doctor"> 
+                    <option value="A">Mr.A</option>
+                    <option value="B">Mr.B</option>
+                    <option value="C">Mr.C</option>
+                </select> <br><br>
+               
+                <label for="spc"> Speciality:</label>
+                <select name="spc" id="spc"> 
+                    <option value="Abc">Abc</option>
+                    <option value="Bcd">Bcd</option>
+                    <option value="Cde">Cde</option>
+                </select> <br><br>
+
+                <label for="sdate"> Session Date: </label>
+                <input type="date" name="sdate" id="sdate"> <br><br>
+
+                <label for="stime"> Session Time: </label>
+                <select name="stime" id="stime"> 
+                    <option value="eight">8 AM</option>
+                    <option value="nine">9 AM</option>
+                    <option value="four">4 PM</option>
+                </select> <br><br>
+            </fieldset>
+        </form>
+
+        <form action="#"></form>
+    </body>
+</html>
